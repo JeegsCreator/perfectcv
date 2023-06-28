@@ -1,0 +1,24 @@
+{
+  "name": "perfect-cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "eslint-config-turbo": "^1.10.3",
+    "prettier": "^2.8.8",
+    "turbo": "^1.10.3"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1"
+  }
+}

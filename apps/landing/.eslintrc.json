@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "prettier",
+    "./node_modules/ts-standard/eslintrc.json",
+    "plugin:astro/recommended",
+    "eslint-config-prettier"
+  ],
+  "plugins": ["eslint-plugin-prettier", "prettier", "eslint-plugin-astro"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      // Allows Astro components to be parsed.
+      "parser": "astro-eslint-parser",
+      "rules": {
+        "prettier/prettier": "warn",
+        "react/self-closing-comp": "off",
+        "react/jsx-key": "off"
+      },
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      }
+    }
+  ]
+}

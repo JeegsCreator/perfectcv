@@ -1,0 +1,123 @@
+---
+import FeatureItem from '../components/FeatureItem.astro'
+import GetAccessButton from '../components/GetAccessButton.astro'
+import Header from '../components/Header.astro'
+import Logo from '../components/Logo.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="PerfectCV | Craft a winning CV and maximize success">
+  <Header />
+  <main>
+    <section class="flex items-center flex-col pt-[20vh] pb-[18vh] gap-4">
+      <span class="text-xl font-bold text-primary"
+        >It's not a template, is more than that...</span
+      >
+      <h1 class="text-center font-semibold text-5xl font-montserrat">
+        Create, update and manage your <br />CVs fast and easily
+      </h1>
+      <p class="text-center text-text-opac text-xl">
+        Craft a winning CV and maximize success with a polished, <br
+        />professional document.
+      </p>
+      <GetAccessButton />
+    </section>
+    <section class="relative">
+      <div class="-z-10 absolute w-full h-[480px]">
+        <div
+          class="bg-gradient-to-tr from-[#4030e8] from-30% to-primary to-70% clippath w-full h-full"
+        >
+        </div>
+      </div>
+      <div class="z-10 text-white flex justify-end gap-8 pt-20 pb-16 pr-[14vw]">
+        <p class="text-center leading-[0]">
+          <span class="text-6xl font-bold">50%</span><br />
+          <span class="text-4xl font-semibold">Better</span>
+        </p>
+        <p class="text-center leading-[0]">
+          <span class="text-6xl font-bold">80%</span><br />
+          <span class="text-4xl font-semibold">Faster</span>
+        </p>
+      </div>
+      <div class="grid grid-cols-3 px-[14vw] gap-2">
+        <FeatureItem
+          name="Create"
+          info={[
+            {
+              title: 'Get tips to write the best CV',
+              text: 'Avoid long research, all the knowledge you need is in the left to easy access.',
+            },
+            {
+              title: 'Use AI to give a elegant and clear style in your texts',
+              text: 'Poor copy-writing skills won’t get a job. Solve this problem with AI to give a professional impression',
+            },
+          ]}
+        />
+        <FeatureItem
+          name="Update"
+          info={[
+            {
+              title: 'Fast add or remove information',
+              text: 'Stop fighting every time you need to do a change. When you add or delete info all the document will adapt',
+            },
+            {
+              title: 'Change the look and feel in just one click',
+              text: 'After you finish writing you want to change the template? No problem. In just one click you can get a completely different CV',
+            },
+          ]}
+        />
+        <FeatureItem
+          name="Manage"
+          info={[
+            {
+              title: 'Generate job-targeted versions of your CV with AI',
+              text: 'Copy-paste the job you want to apply and get a CV perfect targeted to that job',
+            },
+            {
+              title: 'Edit each version independently',
+              text: 'Each version of your CV is fully editable so you can make all the changes you want',
+            },
+          ]}
+        />
+      </div>
+    </section>
+    <section class="h-[70vh] flex flex-col justify-center items-center gap-4">
+      <div class="flex flex-col">
+        <div class="flex items-center gap-3">
+          <h2 class="text-4xl font-semibold pb-2">
+            <span>Ready to get your</span>
+            <span class="hidden">perfect CV</span>
+          </h2>
+          <Logo height={56} />
+          <span class="text-4xl font-semibold pb-2">?</span>
+        </div>
+        <p class="text-lg">
+          Leave your email and get notified once a seat is ready for you.
+        </p>
+      </div>
+      <form
+        class="h-10 border border-text-opac min-w-3/12 flex rounded-md overflow-hidden jus"
+      >
+        <input
+          type="text"
+          placeholder="somebody@example.com"
+          class="flex-grow px-4 min-w-[300px]"
+        />
+        <button class="bg-primary text-white font-medium px-4"
+          >Join the waitlist</button
+        >
+      </form>
+    </section>
+  </main>
+  <footer
+    class="h-[15vh] flex justify-center items-center border-t border-primary"
+  >
+    <div></div>
+    <span class="text-text-opac"
+      >Built with :heart by <a
+        href="https://twitter.com/jeegscreator"
+        class="underline">Jeegs</a
+      ></span
+    >
+  </footer>
+</Layout>

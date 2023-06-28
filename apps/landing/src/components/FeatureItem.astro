@@ -1,0 +1,27 @@
+---
+export interface Props {
+  name: string
+  info: {
+    title: string
+    text: string
+  }[]
+}
+
+const { info, name } = Astro.props
+---
+
+<article
+  class="border border-primary bg-white flex-grow rounded-2xl p-8 px-10 aspect-[3/4]"
+>
+  <h2 class="font-semibold text-center text-3xl mb-8">{name}</h2>
+  <div class="flex flex-col gap-6">
+    {
+      info.map((item) => (
+        <div>
+          <h3 class="font-bold text-primary text-lg mb-2">{item.title}</h3>
+          <p>{item.text}</p>
+        </div>
+      ))
+    }
+  </div>
+</article>
