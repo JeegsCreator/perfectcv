@@ -29,6 +29,17 @@ module.exports = {
 					0 16px 0 16px ${theme('colors.white')}, 
 					0 17px 0 17px ${theme('colors.primary')}
 					`
+				},
+				'.bg-pattern': {
+					'background-image': 'url("/background-pattern.webp")'
+				},
+				'.text-separator': {
+					'text-shadow': `
+					2px 2px 0 ${theme('colors.primary')}, 
+					-2px -2px 0 ${theme('colors.primary')},
+					-2px 2px 0 ${theme('colors.primary')},
+					2px -2px 0 ${theme('colors.primary')}`,
+					'color': '#fff'
 				}
 			})
 		}

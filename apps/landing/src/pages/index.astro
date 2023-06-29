@@ -1,45 +1,52 @@
 ---
 import FeatureItem from '../components/FeatureItem.astro'
-import GetAccessButton from '../components/GetAccessButton.astro'
 import Header from '../components/Header.astro'
-import Logo from '../components/Logo.astro'
+import LogoWhite from '../components/LogoWhite.astro'
+import HeartIcon from '../components/HeartIcon.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="PerfectCV | Craft a winning CV and maximize success">
   <Header />
   <main>
-    <section class="flex items-center flex-col pt-[20vh] pb-[18vh] gap-4">
-      <span class="text-xl font-bold text-primary"
+    <section class="flex items-center flex-col pt-[20vh] pb-[18vh] gap-4 px-4">
+      <span class="text-lg font-semibold md:text-xl md:font-bold text-primary"
         >It's not a template, is more than that...</span
       >
-      <h1 class="text-center font-semibold text-5xl font-montserrat">
-        Create, update and manage your <br />CVs fast and easily
+      <h1
+        class="text-center font-semibold text-4xl md:text-5xl font-montserrat max-w-[750px]"
+      >
+        Create, update and manage your CVs fast and easily
       </h1>
-      <p class="text-center text-text-opac text-xl">
-        Craft a winning CV and maximize success with a polished, <br
-        />professional document.
+      <p class="text-center text-text-opac text-md md:text-xl max-w-[550px]">
+        Craft a winning CV and maximize success with a polished, professional
+        document.
       </p>
-      <GetAccessButton />
+      <a
+        class="bg-primary text-white font-medium h-9 grid place-items-center px-4 rounded-lg"
+        id="waitlist-button"
+        href="https://magic.beehiiv.com/v1/e35b88c2-2c96-4e7b-b86e-45a112b1c75d?redirect_to=http://localhost:3000/&utm_source=landing&utm_medium=hero"
+      >
+        Get early access
+      </a>
     </section>
     <section class="relative">
-      <div class="-z-10 absolute w-full h-[480px]">
+      <div
+        class="-z-10 absolute w-full h-[80vh] mt-[6vh] md:mt-[18vh] lg:mt-[30vh]"
+      >
         <div
           class="bg-gradient-to-tr from-[#4030e8] from-30% to-primary to-70% clippath w-full h-full"
         >
         </div>
       </div>
-      <div class="z-10 text-white flex justify-end gap-8 pt-20 pb-16 pr-[14vw]">
-        <p class="text-center leading-[0]">
-          <span class="text-6xl font-bold">50%</span><br />
-          <span class="text-4xl font-semibold">Better</span>
-        </p>
-        <p class="text-center leading-[0]">
-          <span class="text-6xl font-bold">80%</span><br />
-          <span class="text-4xl font-semibold">Faster</span>
-        </p>
-      </div>
-      <div class="grid grid-cols-3 px-[14vw] gap-2">
+      <picture class="flex justify-center px-4">
+        <img
+          class="max-h-[75vh] border border-primary rounded-lg object-contain"
+          src="/Dashboard.webp"
+          alt="perfectCV dashboard"
+        />
+      </picture>
+      <div class="flex flex-wrap justify-center gap-2 mt-20">
         <FeatureItem
           name="Create"
           info={[
@@ -81,43 +88,80 @@ import Layout from '../layouts/Layout.astro'
         />
       </div>
     </section>
-    <section class="h-[70vh] flex flex-col justify-center items-center gap-4">
-      <div class="flex flex-col">
-        <div class="flex items-center gap-3">
-          <h2 class="text-4xl font-semibold pb-2">
-            <span>Ready to get your</span>
-            <span class="hidden">perfect CV</span>
-          </h2>
-          <Logo height={56} />
-          <span class="text-4xl font-semibold pb-2">?</span>
-        </div>
-        <p class="text-lg">
-          Leave your email and get notified once a seat is ready for you.
-        </p>
-      </div>
-      <form
-        class="h-10 border border-text-opac min-w-3/12 flex rounded-md overflow-hidden jus"
+    <section
+      class="h-[70vh] flex flex-col justify-center items-center gap-4 px-4"
+    >
+      <div
+        class="relative md:aspect-[16/5] bg-gradient-to-l from-[#4030e8] from-30% to-primary to-70% w-full lg:w-8/12 rounded-lg p-16 overflow-hidden flex flex-col justify-center"
       >
-        <input
-          type="text"
-          placeholder="somebody@example.com"
-          class="flex-grow px-4 min-w-[300px]"
-        />
-        <button class="bg-primary text-white font-medium px-4"
-          >Join the waitlist</button
+        <div
+          class="z-10 opacity-50 bg-pattern absolute left-0 right-0 top-0 bottom-0 bg-cover mix-blend-darken"
         >
-      </form>
+        </div>
+        <div class="z-20 flex flex-col text-white">
+          <div class="flex items-center gap-3 flex-wrap">
+            <h2 class="text-4xl font-semibold pb-2 text-white">
+              <span>Be the first to use</span>
+              <span class="hidden">perfect CV</span>
+            </h2>
+            <LogoWhite height={56} />
+          </div>
+          <p class="text-lg mt-6 mb-4">
+            Leave your email and get notified once a seat is ready for you.
+          </p>
+        </div>
+        <a
+          class="z-20 w-fit px-6 py-1 bg-white text-primary font-medium grid place-items-center rounded-lg"
+          id="waitlist-button"
+          href="https://magic.beehiiv.com/v1/e35b88c2-2c96-4e7b-b86e-45a112b1c75d?redirect_to=http://localhost:3000/&utm_source=landing&utm_medium=footer"
+        >
+          Get early access
+        </a>
+        <!-- <form
+          class="z-20 h-10 strong-shadow min-w-3/12 flex rounded-md overflow-hidden w-fit"
+        >
+          <input
+            type="text"
+            placeholder="somebody@example.com"
+            class="flex-grow px-4 min-w-[350px]"
+          />
+          <button
+            class="bg-primary text-white font-medium px-6"
+            id="waitlist-button">Join the waitlist</button
+          >
+        </form> -->
+      </div>
     </section>
   </main>
-  <footer
-    class="h-[15vh] flex justify-center items-center border-t border-primary"
-  >
+  <footer class="h-[15vh] flex justify-center items-center">
     <div></div>
     <span class="text-text-opac"
-      >Built with :heart by <a
+      >Built with <HeartIcon /> by <a
+        target="_blank"
+        rel="noreferrer"
         href="https://twitter.com/jeegscreator"
         class="underline">Jeegs</a
       ></span
     >
   </footer>
 </Layout>
+
+<script>
+  import mixpanel from 'mixpanel-browser'
+
+  mixpanel.init(import.meta.env.PUBLIC_MIXPANEL_TOKEN, {
+    debug: true,
+    track_pageview: true,
+  })
+
+  const $buttons = document.querySelectorAll('#waitlist-button')
+
+  $buttons.forEach(($button) => {
+    $button.addEventListener('click', () => {
+      console.log('click')
+      mixpanel.track('Joined waitlist', {
+        'event data': Date().toString(),
+      })
+    })
+  })
+</script>
